@@ -8,7 +8,7 @@ RUN wget https://raw.githubusercontent.com/paulp/sbt-extras/master/sbt \
     && chmod +x sbt
 
 WORKDIR /tmp
-RUN ./sbt -sbt-create -211
+RUN /usr/bin/sbt -sbt-create -211
 
 # Install Node
 ENV NODE_VERSION 0.12.5
