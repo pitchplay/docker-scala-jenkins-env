@@ -19,5 +19,8 @@ RUN curl -SLO "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-
     && npm install -g npm@"$NPM_VERSION" \
     && npm cache clear
 
+# Install graphviz
+RUN apt-get update && apt-get install -y graphviz
+
 # Dummy placeholder
 CMD ["/usr/bin/sbt", "-h"]
